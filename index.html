@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8" />
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Yeseva+One&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      background-color: #ecf0f1;
+    }
+    #text {
+      width: 800px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      font-size: 60px;
+      font-family: "Yeseva One", cursive;
+      color: #8e44ad;
+    }
+  </style>
+  <script src=""></script>
+  <body>
+    <div id="text"></div>
+  </body>
+  <script>
+    let text = document.getElementById("text");
+    var countDown = function (x) {
+      if (x > 0) {
+        text.innerHTML = x;
+
+        setTimeout(function () {
+          countDown(x - 1);
+        }, 1000);
+      } else {
+        text.innerHTML = "Happy Independence Day";
+      }
+    };
+
+    countDown(10);
+  </script>
+</html>
